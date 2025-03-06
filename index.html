@@ -1,110 +1,111 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Curriculum di Alessandro</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-        }
-        h2 {
-            color: #333;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .section h3 {
-            background-color: #ddd;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-        .content {
-            margin-left: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Digitale</title>
+  <!-- Import del font Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<header>
-    <h1>Curriculum di Alessandro</h1>
-    <p>Informazioni e competenze professionali</p>
-</header>
-
-<div class="container">
-
-    <div class="section">
-        <h3>Informazioni Personali</h3>
-        <div class="content">
-            <p><strong>Nome:</strong> Alessandro</p>
-            <p><strong>Email:</strong> alessandro@email.com</p>
-            <p><strong>Telefono:</strong> +39 123 456 7890</p>
-            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/alessandro">linkedin.com/in/alessandro</a></p>
-        </div>
+  <div class="container">
+    <!-- Prima riga: Profilo e Bio -->
+    <div class="row">
+      <!-- Card Profilo: foto e info -->
+      <div class="card profile square">
+         <div class="profile-content">
+           <img src="Images/20250306_181416_CinqueTerzi.jpg" alt="Foto Profilo">
+           <div class="profile-info">
+             <h1>Alessandro Mercede</h1>
+             <ul>
+               <li>Programmatore</li>
+               <li>Assemblatore di PC</li>
+               <li>Tecnico Informatico</li>
+               <li>Sviluppatore Web</li>
+             </ul>
+           </div>
+         </div>
+         <!-- Freccia rivolta a destra -->
+         <a class="arrow" href="esempio.html">&#8594;</a>
+      </div>
+      <!-- Card Bio: informazioni aggiuntive -->
+      <div class="card bio">
+         <p>Ragazzo appassionato di tech, sempre alla ricerca di nuove sfide e innovazioni nel mondo informatico.</p>
+         <a class="arrow" href="esempio.html">&#8594;</a>
+      </div>
     </div>
 
-    <div class="section">
-        <h3>Esperienza Professionale</h3>
-        <div class="content">
-            <h4>Posizione: Sviluppatore Web</h4>
-            <p><strong>Periodo:</strong> Gennaio 2020 - Presente</p>
-            <p><strong>Azienda:</strong> XYZ Tech</p>
-            <p>Descrizione: Sviluppo di applicazioni web moderne, ottimizzazione delle prestazioni e creazione di soluzioni personalizzate per i clienti.</p>
-        </div>
-        <div class="content">
-            <h4>Posizione: Analista di Dati</h4>
-            <p><strong>Periodo:</strong> Giugno 2018 - Dicembre 2019</p>
-            <p><strong>Azienda:</strong> ABC Analytics</p>
-            <p>Descrizione: Analisi di grandi volumi di dati, creazione di report e supporto decisionale tramite dashboard interattive.</p>
-        </div>
+    <!-- Seconda riga: Portfolio, Servizi e Social -->
+    <div class="row">
+      <div class="card portfolio square">
+         <h2>Portfolio</h2>
+         <p>Esposizione dei miei progetti e lavori.</p>
+         <a class="arrow" href="esempio.html">&#8594;</a>
+      </div>
+      <div class="card services square">
+         <h2>Servizi</h2>
+         <ul>
+           <li>Build PC gaming/professionali/studio</li>
+           <li>Programmazione</li>
+           <li>Sviluppo siti web statici</li>
+         </ul>
+         <a class="arrow" href="esempio.html">&#8594;</a>
+      </div>
+      <div class="card social square">
+         <h2>Social</h2>
+         <ul>
+           <li>Instagram</li>
+           <li>Tiktok</li>
+           <li>Facebook</li>
+           <li>LinkedIn</li>
+         </ul>
+         <a class="arrow" href="esempio.html">&#8594;</a>
+      </div>
     </div>
 
-    <div class="section">
-        <h3>Istruzione</h3>
-        <div class="content">
-            <h4>Laurea in Informatica</h4>
-            <p><strong>Università:</strong> Università degli Studi di Verona</p>
-            <p><strong>Anno di Laurea:</strong> 2023</p>
-        </div>
+    <!-- Terza riga: Carriera Studentesca e Contatti -->
+    <div class="row">
+      <!-- Card Carriera Studentesca: dimensione standard -->
+      <div class="card education square">
+         <h2>Carriera Studentesca</h2>
+         <ul>
+           <li>Probabilità e Statistica</li>
+           <li>Analisi</li>
+           <li>Programmazione</li>
+           <li>Reti</li>
+         </ul>
+         <a class="arrow" href="esempio.html">&#8594;</a>
+      </div>
+      <!-- Card Contatti: tasto per contattarti -->
+      <div class="card contact square">
+         <h2>Contattami</h2>
+         <a class="arrow" href="esempio.html">&#8594;</a>
+      </div>
     </div>
+  </div>
 
-    <div class="section">
-        <h3>Competenze</h3>
-        <div class="content">
-            <ul>
-                <li>Programmazione: Python, JavaScript, HTML, CSS</li>
-                <li>Sistemi Operativi: Linux, Windows</li>
-                <li>Strumenti: Git, Docker, Visual Studio Code</li>
-            </ul>
-        </div>
+  <!-- Footer con firma, navbar e copyright -->
+  <footer>
+    <div class="footer-signature">
+      <p>Ax3l</p>
     </div>
-
-    <div class="section">
-        <h3>Lingue</h3>
-        <div class="content">
-            <ul>
-                <li>Italiano: Madrelingua</li>
-                <li>Inglese: Avanzato</li>
-            </ul>
-        </div>
+    <nav class="footer-nav">
+      <ul>
+         <li><a href="esempio.html">Pagina Iniziale</a></li>
+         <li><a href="esempio.html">Informazioni</a></li>
+         <li><a href="esempio.html">Lavori</a></li>
+         <li><a href="esempio.html">Contatti</a></li>
+      </ul>
+    </nav>
+    <div class="footer-copy">
+      <p>&copy; Tutti i diritti sono riservati ad Alessandro Mercede</p>
     </div>
+  </footer>
 
-</div>
-
+  <!-- 
+    Commento: Per implementare il light mode, puoi definire le variabili CSS (es. --bg-color, --card-bg-color, --text-color, ecc.) 
+    e sovrascriverle aggiungendo una classe "light-mode" al :root tramite JavaScript.
+  -->
 </body>
 </html>

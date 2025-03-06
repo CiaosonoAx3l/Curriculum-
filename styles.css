@@ -1,0 +1,190 @@
+/* Import delle variabili per il tema scuro. Per il light mode, sovrascrivi queste variabili (es. aggiungendo una classe "light-mode" al :root). */
+:root {
+    --bg-color: #121212;
+    --card-bg-color: #1e1e1e;
+    --text-color: #f0f0f0;
+    --border-radius: 15px;
+    --arrow-color: #f0f0f0;
+  }
+  
+  /* Disabilita la selezione del testo per tutta la pagina */
+  * {
+    user-select: none;
+  }
+  
+  /* Applica il font Poppins a tutta la pagina */
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Il container occupa lo spazio rimanente, spingendo il footer in fondo */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    flex: 1;
+  }
+  
+  /* Righe in layout flex */
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Stile comune per le card */
+  .card {
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Card quadrate (default) */
+  .square {
+    width: 300px;
+    height: 300px;
+  }
+  
+  /* Ingrandisci i primi due div: Profilo e Bio */
+  .card.profile.square,
+  .card.bio {
+    width: 370px;
+    height: 370px;
+  }
+  
+  /* Card Carriera Studentesca: dimensione standard (uguale agli altri quadrati) */
+  .card.education.square {
+    width: 500px;
+    height: 300px;
+  }
+  
+  /* Profilo: allineamento foto e informazioni */
+  .profile-content {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-content img {
+    width: 120px; /* foto ingrandita */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .profile-info h1 {
+    margin: 10px 0 0 0;
+    font-size: 1.8em;
+  }
+  
+  /* Rimozione dei marker di default e aggiunta del trattino per tutti i <ul> */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+  }
+  
+  li {
+    line-height: 1.4;
+  }
+  
+  ul li::before {
+    content: "- ";
+    margin-right: 5px;
+  }
+  
+  /* Freccia per la navigazione all'interno di ogni card - posizionata a destra in basso */
+  .arrow {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: var(--arrow-color);
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  .arrow:hover {
+    color: #fff;
+  }
+  
+  /* Footer styles: sempre in fondo alla pagina */
+  footer {
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-signature p {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+  }
+  
+  .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .footer-nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+  }
+  
+  .footer-nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-copy p {
+    margin: 0;
+    font-size: 0.9em;
+  }
+  
+  /* Responsività per smartphone */
+  @media (max-width: 600px) {
+    /* Imposta le righe in colonna */
+    .row {
+      flex-direction: column;
+    }
+    /* Le card occupano quasi tutta la larghezza e l'altezza si adatta al contenuto */
+    .card {
+      width: 90%;
+      height: auto;
+    }
+    /* Nel profilo, disponi foto e info in colonna per rispettare l'ordine */
+    .profile-content {
+      flex-direction: column;
+    }
+    /* Uniforma la dimensione della card education sui piccoli schermi */
+    .card.education.square {
+      width: 90%;
+      height: auto;
+    }
+  }
+  
