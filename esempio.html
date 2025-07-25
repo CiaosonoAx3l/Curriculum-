@@ -1,1 +1,107 @@
-esempio
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Digitale</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="esempio.css">
+  <script defer src="esempio.js"></script>
+</head>
+<body>
+  <div class="lang-switch">
+    <img src="icons/it.png" alt="IT" title="Italiano">
+    <img src="icons/en.png" alt="EN" title="English">
+  </div>
+
+  <div class="container">
+    <!-- Profilo principale -->
+    <div class="row">
+      <div class="card profile wide fade-in clickable" onclick="navigateTo('bio.html')">
+        <div class="profile-content">
+          <img src="Images/20250306_181416_CinqueTerzi.jpg" alt="Foto Profilo">
+          <div class="profile-info">
+            <h1>Alessandro Mercede</h1>
+            <p>Appassionato di tecnologia, con un forte interesse per la programmazione, i sistemi hardware e le innovazioni digitali.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Biografia -->
+    <div class="row">
+      <div class="card biography fade-in clickable" onclick="navigateTo('bio.html')">
+        <h2>Biografia</h2>
+        <p>Mi chiamo Alessandro, ho sempre avuto una passione per il mondo IT, fin da bambino smontavo e rimontavo PC. Oggi sviluppo soluzioni digitali complete.</p>
+      </div>
+    </div>
+
+    <!-- Esperienze lavorative e studentesche -->
+    <div class="row">
+      <div class="card work fade-in clickable" onclick="navigateTo('lavoro.html')">
+        <h2>Esperienze Lavorative</h2>
+        <ul>
+          <li>Assistenza tecnica</li>
+          <li>Creazione siti web</li>
+          <li>Supporto informatico freelance</li>
+        </ul>
+      </div>
+      <div class="card education fade-in clickable" onclick="navigateTo('carriera.html')">
+        <h2>Esperienze Studentesche</h2>
+        <ul>
+          <li>Diploma I.T.I.S. Informatica</li>
+          <li>Università: Probabilità, Analisi, Reti</li>
+          <li>Erasmus 2025 - Irlanda</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Titoli e Certificazioni -->
+    <div class="row">
+      <div class="card titles fade-in clickable" onclick="navigateTo('certificazioni.html')">
+        <h2>Titoli e Certificazioni</h2>
+        <ul>
+          <li>Diploma Tecnico in Informatica</li>
+          <li>Certificazione Cisco CCNA</li>
+          <li>Certificazione Google IT Support</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Social e Contatti -->
+    <div class="row">
+      <div class="card social fade-in clickable" onclick="navigateTo('social.html')">
+        <h2>Social</h2>
+        <div class="social-icons">
+          <a href="https://instagram.com" target="_blank"><img src="icons/Instagram.png" alt="Instagram"></a>
+          <a href="https://tiktok.com" target="_blank"><img src="icons/tiktok.png" alt="TikTok"></a>
+          <a href="https://facebook.com" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+          <a href="https://linkedin.com" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+      <div class="card contact fade-in">
+        <h2>Contattami</h2>
+        <p><strong>Email:</strong> alessandro@example.com</p>
+        <p><strong>Telefono:</strong> +39 333 123 4567</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-signature">
+      <p>Ax3l</p>
+    </div>
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="bio.html">Chi sono</a></li>
+        <li><a href="lavoro.html">Lavori</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </nav>
+    <div class="footer-copy">
+      <p>&copy; Alessandro Mercede</p>
+    </div>
+  </footer>
+</body>
+</html>
