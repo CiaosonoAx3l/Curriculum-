@@ -4,104 +4,108 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Curriculum Digitale</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="esempio.css">
-  <script defer src="esempio.js"></script>
+  <!-- Import del font Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="lang-switch">
-    <img src="icons/it.png" alt="IT" title="Italiano">
-    <img src="icons/en.png" alt="EN" title="English">
-  </div>
-
   <div class="container">
-    <!-- Profilo principale -->
+    <!-- Prima riga: Profilo e Bio -->
     <div class="row">
-      <div class="card profile wide fade-in clickable" onclick="navigateTo('bio.html')">
-        <div class="profile-content">
-          <img src="Images/20250306_181416_CinqueTerzi.jpg" alt="Foto Profilo">
-          <div class="profile-info">
-            <h1>Alessandro Mercede</h1>
-            <p>Appassionato di tecnologia, con un forte interesse per la programmazione, i sistemi hardware e le innovazioni digitali.</p>
-          </div>
-        </div>
+      <!-- Card Profilo: foto e info -->
+      <div class="card profile square">
+         <div class="profile-content">
+           <img src="Images/20250306_181416_CinqueTerzi.jpg" alt="Foto Profilo">
+           <div class="profile-info">
+             <h1>Alessandro Mercede</h1>
+             <ul>
+               <li>Programmatore</li>
+               <li>Assemblatore di PC</li>
+               <li>Tecnico Informatico</li>
+               <li>Sviluppatore Web</li>
+             </ul>
+           </div>
+         </div>
+         <!-- Freccia rivolta a destra -->
+         <a class="arrow" href="esempio.html">&#8594;</a>
+      </div>
+      <!-- Card Bio: informazioni aggiuntive -->
+      <div class="card bio">
+         <p>Ragazzo appassionato di tech, sempre alla ricerca di nuove sfide e innovazioni nel mondo informatico.</p>
+         <a class="arrow" href="esempio.html">&#8594;</a>
       </div>
     </div>
 
-    <!-- Biografia -->
+    <!-- Seconda riga: Portfolio, Servizi e Social -->
     <div class="row">
-      <div class="card biography fade-in clickable" onclick="navigateTo('bio.html')">
-        <h2>Biografia</h2>
-        <p>Mi chiamo Alessandro, ho sempre avuto una passione per il mondo IT, fin da bambino smontavo e rimontavo PC. Oggi sviluppo soluzioni digitali complete.</p>
+      <div class="card portfolio square">
+         <h2>Portfolio</h2>
+         <p>Esposizione dei miei progetti e lavori.</p>
+         <a class="arrow" href="esempio.html">&#8594;</a>
+      </div>
+      <div class="card services square">
+         <h2>Servizi</h2>
+         <ul>
+           <li>Build PC gaming/professionali/studio</li>
+           <li>Programmazione</li>
+           <li>Sviluppo siti web statici</li>
+         </ul>
+         <a class="arrow" href="esempio.html">&#8594;</a>
+      </div>
+      <div class="card social square">
+         <h2>Social</h2>
+         <ul>
+           <li>Instagram</li>
+           <li>Tiktok</li>
+           <li>Facebook</li>
+           <li>LinkedIn</li>
+         </ul>
+         <a class="arrow" href="esempio.html">&#8594;</a>
       </div>
     </div>
 
-    <!-- Esperienze lavorative e studentesche -->
+    <!-- Terza riga: Carriera Studentesca e Contatti -->
     <div class="row">
-      <div class="card work fade-in clickable" onclick="navigateTo('lavoro.html')">
-        <h2>Esperienze Lavorative</h2>
-        <ul>
-          <li>Assistenza tecnica</li>
-          <li>Creazione siti web</li>
-          <li>Supporto informatico freelance</li>
-        </ul>
+      <!-- Card Carriera Studentesca: dimensione standard -->
+      <div class="card education square">
+         <h2>Carriera Studentesca</h2>
+         <ul>
+           <li>Probabilità e Statistica</li>
+           <li>Analisi</li>
+           <li>Programmazione</li>
+           <li>Reti</li>
+         </ul>
+         <a class="arrow" href="esempio.html">&#8594;</a>
       </div>
-      <div class="card education fade-in clickable" onclick="navigateTo('carriera.html')">
-        <h2>Esperienze Studentesche</h2>
-        <ul>
-          <li>Diploma I.T.I.S. Informatica</li>
-          <li>Università: Probabilità, Analisi, Reti</li>
-          <li>Erasmus 2025 - Irlanda</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Titoli e Certificazioni -->
-    <div class="row">
-      <div class="card titles fade-in clickable" onclick="navigateTo('certificazioni.html')">
-        <h2>Titoli e Certificazioni</h2>
-        <ul>
-          <li>Diploma Tecnico in Informatica</li>
-          <li>Certificazione Cisco CCNA</li>
-          <li>Certificazione Google IT Support</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Social e Contatti -->
-    <div class="row">
-      <div class="card social fade-in clickable" onclick="navigateTo('social.html')">
-        <h2>Social</h2>
-        <div class="social-icons">
-          <a href="https://instagram.com" target="_blank"><img src="icons/Instagram.png" alt="Instagram"></a>
-          <a href="https://tiktok.com" target="_blank"><img src="icons/tiktok.png" alt="TikTok"></a>
-          <a href="https://facebook.com" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
-          <a href="https://linkedin.com" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
-        </div>
-      </div>
-      <div class="card contact fade-in">
-        <h2>Contattami</h2>
-        <p><strong>Email:</strong> alessandro@example.com</p>
-        <p><strong>Telefono:</strong> +39 333 123 4567</p>
+      <!-- Card Contatti: tasto per contattarti -->
+      <div class="card contact square">
+         <h2>Contattami</h2>
+         <a class="arrow" href="esempio.html">&#8594;</a>
       </div>
     </div>
   </div>
 
+  <!-- Footer con firma, navbar e copyright -->
   <footer>
     <div class="footer-signature">
       <p>Ax3l</p>
     </div>
     <nav class="footer-nav">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="bio.html">Chi sono</a></li>
-        <li><a href="lavoro.html">Lavori</a></li>
-        <li><a href="contatti.html">Contatti</a></li>
+         <li><a href="esempio.html">Pagina Iniziale</a></li>
+         <li><a href="esempio.html">Informazioni</a></li>
+         <li><a href="esempio.html">Lavori</a></li>
+         <li><a href="esempio.html">Contatti</a></li>
       </ul>
     </nav>
     <div class="footer-copy">
-      <p>&copy; Alessandro Mercede</p>
+      <p>&copy; Tutti i diritti sono riservati ad Alessandro Mercede</p>
     </div>
   </footer>
+
+  <!-- 
+    Commento: Per implementare il light mode, puoi definire le variabili CSS (es. --bg-color, --card-bg-color, --text-color, ecc.) 
+    e sovrascriverle aggiungendo una classe "light-mode" al :root tramite JavaScript.
+  -->
 </body>
 </html>
