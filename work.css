@@ -1,0 +1,84 @@
+:root {
+  --bg-color: #0d0d0d;
+  --card-bg-color: #141414;
+  --text-color: #f0f0f0;
+  --accent-color: #00ffff;
+  --font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, var(--bg-color), #000e2e);
+  animation: bgShift 60s ease infinite;
+  background-size: 400% 400%;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+a.spark-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Box con spark */
+.spark-box {
+  position: relative;
+  background: var(--card-bg-color);
+  border-radius: 16px;
+  padding: 40px 60px;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.spark-box:hover {
+  transform: scale(1.05);
+}
+
+.spark-box p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+/* Bordo spark */
+.spark-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px;
+  border-radius: 18px;
+  background: linear-gradient(90deg,
+    transparent,
+    var(--accent-color),
+    transparent,
+    var(--accent-color),
+    transparent
+  );
+  background-size: 300% 300%;
+  animation: sparkMove 4s linear infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+@keyframes sparkMove {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

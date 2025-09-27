@@ -1,123 +1,123 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curriculum Digitale</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="esempio.js"></script>
-</head>
-<body>
-  <div class="lang-switch">
-    <img src="icons/it.png" alt="IT" title="Italiano" onclick="window.location.href='indexIT.html'">
-    <img src="icons/en.png" alt="EN" title="Inglese" onclick="window.location.href='index.html'">
-  </div>
+  <!DOCTYPE html>
+  <html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Digitale</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="themeFade.js"></script>
+  </head>
+  <body>
+    <div class="lang-switch">
+      <img src="icons/it.png" alt="IT" title="Italiano" onclick="window.location.href='indexIT.html'">
+      <img src="icons/en.png" alt="EN" title="Inglese" onclick="window.location.href='index.html'">
+    </div>
 
-  <div class="container">
-    <!-- Profilo principale -->
-    <div class="row">
-      <div class="card profile wide fade-in clickable" onclick="navigateTo('bio.html')">
-        <div class="profile-content">
-          <img src="Images/20250306_181416_CinqueTerzi.jpg" alt="Foto Profilo">
-          <div class="profile-info">
-            <h1>Alessandro Mercede</h1>
-            <p>Sono appassionato di tecnologia, con un forte interesse per la programmazione, i sistemi hardware e le innovazioni digitali.</p>
+    <div class="container">
+      <!-- Profilo principale -->
+      <div class="row">
+        <div class="card profile wide fade-in clickable" onclick="navigateTo('bioIT.html')">
+          <div class="profile-content">
+            <img src="Images/20250306_181416_CinqueTerzi.jpg" alt="Foto Profilo">
+            <div class="profile-info">
+              <h1>Alessandro Mercede</h1>
+              <p>Sono appassionato di tecnologia, con un forte interesse per la programmazione, i sistemi hardware e le innovazioni digitali.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Biografia -->
-    <div class="row">
-      <div class="card biography fade-in clickable" onclick="navigateTo('bio.html')">
-        <h2>Biografia</h2>
-        <p>Ciao, mi chiamo Alessandro Mercede. Ho sempre avuto una passione per il mondo IT; fin da bambino mi divertivo a smontare e rimontare computer. Oggi costruisco workstation complete da zero, componente per componente, e sviluppo siti web e database.</p>
-        <br>
-        <p class="clickHere">Clicca qui per saperne di più su di me.</p>
-      </div>
-    </div>
-
-    <!-- Esperienze lavorative e formative -->
-    <div class="row">
-      <div class="card work fade-in clickable" onclick="navigateTo('work.html')">
-        <h2>Esperienze Lavorative</h2>
-        <ul>
-          <li>Assistenza tecnica</li>
-          <li>Sviluppo di web app utilizzando OpenData</li>
-          <li>Costruzione di workstation PC</li>
-        </ul>
-        <p class="clickHere">Clicca qui per vedere tutte le mie esperienze</p>
-      </div>
-
-      <div class="card education fade-in clickable" onclick="navigateTo('carriera.html')">
-        <h2>Formazione</h2>
-        <ul>
-          <li>I.T.I.S. Alessandro Rossi, Vicenza, Italia</li> 
-          <li>Università di Verona in Informatica</li>
-          <li>Erasmus 2025 Waterford, Irlanda</li> 
-        </ul>
-        <p class="clickHere">Clicca qui per vedere tutti i miei percorsi formativi</p>  
-      </div>
-    </div>
-
-    <!-- Titoli e Certificazioni -->
-    <div class="row">
-      <div class="card titles fade-in clickable" onclick="navigateTo('certificazioni.html')">
-        <h2>Titoli e Certificazioni</h2>
-        <ul>
-          <li>Diploma di scuola superiore in Informatica</li>
-          <li>Certificazione Cisco CCNA</li>
-          <li>Certificazione KNIME</li>
-        </ul>
-        <p class="clickHere">Clicca qui per vedere tutti i miei titoli e certificazioni</p>
-      </div>
-    </div>
-
-    <!-- Social e Contatti -->
-    <div class="row">
-      <div class="card social fade-in clickable" onclick="navigateTo('social.html')">
-        <h2>Social</h2>
-        <div class="social-icons">
-          <a href="https://www.instagram.com/alessandromercede/" target="_blank" onclick="event.stopPropagation()">
-            <img src="icons/Instagram.png" alt="Instagram">
-          </a>
-          <a href="https://www.tiktok.com/@ax3l_builds_pc" target="_blank" onclick="event.stopPropagation()">
-            <img src="icons/tiktok.png" alt="TikTok">
-          </a>
-          <a href="https://www.facebook.com/alessandro.mercede/" target="_blank" onclick="event.stopPropagation()">
-            <img src="icons/facebook.png" alt="Facebook">
-          </a>
-          <a href="https://linkedin.com" target="_blank" onclick="event.stopPropagation()">
-            <img src="icons/linkedin.png" alt="LinkedIn">
-          </a>
+      <!-- Biografia -->
+      <div class="row">
+        <div class="card biography fade-in clickable" onclick="navigateTo('bioIT.html')">
+          <h2>Biografia</h2>
+          <p>Ciao, mi chiamo Alessandro Mercede. Ho sempre avuto una passione per il mondo IT; fin da bambino mi divertivo a smontare e rimontare computer. Oggi costruisco workstation complete da zero, componente per componente, e sviluppo siti web e database.</p>
+          <br>
+          <p class="clickHere">Clicca qui per saperne di più su di me.</p>
         </div>
       </div>
 
-      <div class="card contact fade-in">
-        <h2>Contatti</h2>
-        <p><strong>Email:</strong> mercedealessandro@gmail.com</p>
-        <p><strong>Telefono IT:</strong> +39 3512508066</p>
-        <p><strong>Telefono IRL:</strong> +353 870320567</p>
+      <!-- Esperienze lavorative e formative -->
+      <div class="row">
+        <div class="card work fade-in clickable" onclick="navigateTo('Soon.html')">
+          <h2>Esperienze Lavorative</h2>
+          <ul>
+            <li>Assistenza tecnica</li>
+            <li>Sviluppo di web app utilizzando OpenData</li>
+            <li>Costruzione di workstation PC</li>
+          </ul>
+          <p class="clickHere">Clicca qui per vedere tutte le mie esperienze</p>
+        </div>
+
+        <div class="card education fade-in clickable" onclick="navigateTo('carriera.html')">
+          <h2>Formazione</h2>
+          <ul>
+            <li>I.T.I.S. Alessandro Rossi, Vicenza, Italia</li> 
+            <li>Università di Verona in Informatica</li>
+            <li>Erasmus 2025 Waterford, Irlanda</li> 
+          </ul>
+          <p class="clickHere">Clicca qui per vedere tutti i miei percorsi formativi</p>  
+        </div>
+      </div>
+
+      <!-- Titoli e Certificazioni -->
+      <div class="row">
+        <div class="card titles fade-in clickable" onclick="navigateTo('certificazioni.html')">
+          <h2>Titoli e Certificazioni</h2>
+          <ul>
+            <li>Diploma di scuola superiore in Informatica</li>
+            <li>Certificazione Cisco CCNA</li>
+            <li>Certificazione KNIME</li>
+          </ul>
+          <p class="clickHere">Clicca qui per vedere tutti i miei titoli e certificazioni</p>
+        </div>
+      </div>
+
+      <!-- Social e Contatti -->
+      <div class="row">
+        <div class="card social fade-in clickable" onclick="navigateTo('social.html')">
+          <h2>Social</h2>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/alessandromercede/" target="_blank" onclick="event.stopPropagation()">
+              <img src="icons/Instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@ax3l_builds_pc" target="_blank" onclick="event.stopPropagation()">
+              <img src="icons/tiktok.png" alt="TikTok">
+            </a>
+            <a href="https://www.facebook.com/alessandro.mercede/" target="_blank" onclick="event.stopPropagation()">
+              <img src="icons/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://linkedin.com" target="_blank" onclick="event.stopPropagation()">
+              <img src="icons/linkedin.png" alt="LinkedIn">
+            </a>
+          </div>
+        </div>
+
+        <div class="card contact fade-in">
+          <h2>Contatti</h2>
+          <p><strong>Email:</strong> mercedealessandro@gmail.com</p>
+          <p><strong>Telefono IT:</strong> +39 3512508066</p>
+          <p><strong>Telefono IRL:</strong> +353 870320567</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <footer>
-    <div class="footer-signature">
-      <p>Ax3l</p>
-    </div>
-    <nav class="footer-nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="bio.html">Chi sono</a></li>
-        <li><a href="work.html">Lavori</a></li>
-        <li><a href="contacts.html">Contatti</a></li>
-      </ul>
-    </nav>
-    <div class="footer-copy">
-      <p>&copy; Alessandro Mercede</p>
-    </div>
-  </footer>
-</body>
-</html>
+    <footer>
+      <div class="footer-signature">
+        <p>Ax3l</p>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="bio.html">Chi sono</a></li>
+          <li><a href="work.html">Lavori</a></li>
+          <li><a href="contacts.html">Contatti</a></li>
+        </ul>
+      </nav>
+      <div class="footer-copy">
+        <p>&copy; Alessandro Mercede</p>
+      </div>
+    </footer>
+  </body>
+  </html>
