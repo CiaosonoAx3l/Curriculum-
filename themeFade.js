@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // ANIMAZIONE APPARIZIONE CARDS
+  // INTERSECTION OBSERVER PER FADE-IN
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -9,12 +9,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.2 });
 
-  // FA APPARIRE SUBITO LA CARD BIOGRAPHY
-  const bioCard = document.querySelector('.card.biography');
-  if (bioCard) bioCard.classList.add('appear');
+  const currentPage = window.location.pathname.split('/').pop();
 
-  // OSSERVA TUTTE LE ALTRE CARDS (esclude già la biography)
-  document.querySelectorAll('.card:not(.biography)').forEach(card => observer.observe(card));
+  // FA APPARIRE SUBITO LA CARD BIOGRAPHY SOLO SU bio.html / bioIT.html
+  if (currentPage === 'bio.html' || currentPage === 'bioIT.html') {
+    const bioCard = document.querySelector('.card.biography');
+    if (bioCard) bioCard.classList.add('appear'); // solo visivo
+  }
+
+  // OSSERVA TUTTE LE ALTRE CARDS (fade-in)
+  document.querySelectorAll('.card').forEach(card => {
+    // se siamo su bio.html / bioIT.html, non osservare la biography
+    if ((currentPage === 'bio.html' || currentPage === 'bioIT.html') && card.classList.contains('biography')) return;
+    observer.observe(card);
+  });
 
   // TEMA CHIARO/SCURO TOGGLE
   const toggle = document.createElement('button');
@@ -31,10 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
     width: '40px',
     height: '40px',
     lineHeight: '30px',
-    cursor: 'pointer',
     fontSize: '1.4rem',
     textAlign: 'center',
-    padding: '0'
+    padding: '0',
+    cursor: 'pointer'
   });
   document.body.appendChild(toggle);
 
@@ -51,11 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// FUNZIONE DI NAVIGAZIONE CLICK
 function navigateTo(url) {
   window.location.href = url;
 }
 
-// HOME TOGGLE (🏠) - visibile solo fuori da index.html e indexIT.html
+// HOME BUTTON (solo fuori da index.html / indexIT.html)
 const currentPage = window.location.pathname.split('/').pop();
 if (currentPage !== 'index.html' && currentPage !== 'indexIT.html') {
   const homeBtn = document.createElement('button');
@@ -64,7 +73,7 @@ if (currentPage !== 'index.html' && currentPage !== 'indexIT.html') {
   Object.assign(homeBtn.style, {
     position: 'fixed',
     top: '15px',
-    right: '65px',
+    right: '65px', // distanza dal pulsante tema
     zIndex: '999',
     background: 'var(--card-bg-color)',
     color: 'var(--text-color)',
@@ -73,10 +82,10 @@ if (currentPage !== 'index.html' && currentPage !== 'indexIT.html') {
     width: '40px',
     height: '40px',
     lineHeight: '30px',
-    cursor: 'pointer',
     fontSize: '1.5rem',
     textAlign: 'center',
-    padding: '0'
+    padding: '0',
+    cursor: 'pointer'
   });
   document.body.appendChild(homeBtn);
 
