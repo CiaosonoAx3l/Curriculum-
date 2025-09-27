@@ -9,7 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.2 });
 
-  document.querySelectorAll('.card').forEach(card => observer.observe(card));
+  // FA APPARIRE SUBITO LA CARD BIOGRAPHY
+  const bioCard = document.querySelector('.card.biography');
+  if (bioCard) bioCard.classList.add('appear');
+
+  // OSSERVA TUTTE LE ALTRE CARDS (esclude già la biography)
+  document.querySelectorAll('.card:not(.biography)').forEach(card => observer.observe(card));
 
   // TEMA CHIARO/SCURO TOGGLE
   const toggle = document.createElement('button');
@@ -23,13 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
     color: 'var(--text-color)',
     border: `2px solid var(--accent-color)`,
     borderRadius: '50%',
-    padding: '10px',
-    cursor: 'pointer',
     width: '40px',
     height: '40px',
-    lineHeight: '30px',  // centratura verticale perfetta
+    lineHeight: '30px',
     cursor: 'pointer',
-    fontSize: '1.4rem',    // più grande del pulsante home
+    fontSize: '1.4rem',
     textAlign: 'center',
     padding: '0'
   });
@@ -61,7 +64,7 @@ if (currentPage !== 'index.html' && currentPage !== 'indexIT.html') {
   Object.assign(homeBtn.style, {
     position: 'fixed',
     top: '15px',
-    right: '65px', // distanza dal pulsante tema
+    right: '65px',
     zIndex: '999',
     background: 'var(--card-bg-color)',
     color: 'var(--text-color)',
@@ -69,7 +72,7 @@ if (currentPage !== 'index.html' && currentPage !== 'indexIT.html') {
     borderRadius: '50%',
     width: '40px',
     height: '40px',
-    lineHeight: '30px', // centra l’emoji
+    lineHeight: '30px',
     cursor: 'pointer',
     fontSize: '1.5rem',
     textAlign: 'center',
