@@ -1,5 +1,8 @@
+// single currentPage reused everywhere
+const currentPage = window.location.pathname.split('/').pop();
+
 document.addEventListener('DOMContentLoaded', () => {
-  // INTERSECTION OBSERVER PER FADE-IN
+  // ===== FADE-IN CARDS =====
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -9,22 +12,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.2 });
 
-  const currentPage = window.location.pathname.split('/').pop();
-
-  // FA APPARIRE SUBITO LA CARD BIOGRAPHY SOLO SU bio.html / bioIT.html
+  // FA APPARIRE SUBITO LA CARD BIOGRAPHY SOLO SU BIO.HTML / BIOIT.HTML
   if (currentPage === 'bio.html' || currentPage === 'bioIT.html') {
     const bioCard = document.querySelector('.card.biography');
-    if (bioCard) bioCard.classList.add('appear'); // solo visivo
+    if (bioCard) bioCard.classList.add('appear');
   }
 
-  // OSSERVA TUTTE LE ALTRE CARDS (fade-in)
+  // OSSERVA TUTTE LE CARDS (se siamo su bio.html / bioIT.html la biography viene già mostrata)
   document.querySelectorAll('.card').forEach(card => {
-    // se siamo su bio.html / bioIT.html, non osservare la biography
     if ((currentPage === 'bio.html' || currentPage === 'bioIT.html') && card.classList.contains('biography')) return;
     observer.observe(card);
   });
 
-  // TEMA CHIARO/SCURO TOGGLE
+  // ===== TEMA CHIARO/SCURO =====
+  // Applica preferenza salvata se presente
+  if (localStorage.getItem('theme') === 'light') {
+    document.documentElement.classList.add('light-mode');
+  }
+
   const toggle = document.createElement('button');
   toggle.innerText = '🌓';
   Object.assign(toggle.style, {
@@ -48,9 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   toggle.addEventListener('click', () => {
     document.documentElement.classList.toggle('light-mode');
+    if (document.documentElement.classList.contains('light-mode')) {
+      localStorage.setItem('theme', 'light');
+    } else {
+      localStorage.removeItem('theme');
+    }
   });
 
-  // CONTROLLA ERRORI ICONE SOCIAL
+  // ===== CONTROLLA ERRORI ICONE SOCIAL =====
   const icons = document.querySelectorAll('.social-icons img');
   icons.forEach(icon => {
     icon.addEventListener('error', () => {
@@ -59,13 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// FUNZIONE DI NAVIGAZIONE CLICK
+// ===== FUNZIONE NAVIGAZIONE =====
 function navigateTo(url) {
   window.location.href = url;
 }
 
-// HOME BUTTON (solo fuori da index.html / indexIT.html)
-const currentPage = window.location.pathname.split('/').pop();
+// ===== HOME BUTTON (🏠) =====
 if (currentPage !== 'index.html' && currentPage !== 'indexIT.html') {
   const homeBtn = document.createElement('button');
   homeBtn.innerText = '🏠';
@@ -73,7 +82,7 @@ if (currentPage !== 'index.html' && currentPage !== 'indexIT.html') {
   Object.assign(homeBtn.style, {
     position: 'fixed',
     top: '15px',
-    right: '65px', // distanza dal pulsante tema
+    right: '65px',
     zIndex: '999',
     background: 'var(--card-bg-color)',
     color: 'var(--text-color)',
