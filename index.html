@@ -1,123 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Curriculum</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="themeFade.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="themeFade.js"></script>
 </head>
 <body>
-  <div class="lang-switch">
-  <img src="icons/it.png" alt="IT" title="Italian" onclick="window.location.href='indexIT.html'">
-  <img src="icons/en.png" alt="EN" title="English" onclick="window.location.href='index.html'">
-</div>
+    <div class="lang-switch">
+        <img src="icons/it.png" alt="IT" title="Italiano" onclick="window.location.href='indexIT.html'">
+        <img src="icons/en.png" alt="EN" title="English" onclick="window.location.href='index.html'">
+    </div>
 
-
-  <div class="container">
-    <!-- Main Profile -->
-    <div class="row">
-      <div class="card profile wide fade-in clickable" onclick="navigateTo('bio.html')">
-        <div class="profile-content">
-          <img src="Images/20250306_181416_CinqueTerzi.jpg" alt="Profile Picture">
-          <div class="profile-info">
-            <h1>Alessandro Mercede</h1>
-            <p>I am passionate about technology, with a strong interest in programming, hardware systems, and digital innovations.</p>
-          </div>
+    <div class="container">
+        <div class="row">
+            <div class="card profile wide fade-in clickable" onclick="navigateTo('bio.html')">
+                <div class="profile-content">
+                    <img src="Images/20250306_181416_CinqueTerzi.jpg" alt="Profile Photo">
+                    <div class="profile-info">
+                        <h1>Alessandro Mercede</h1>
+                        <p>I am passionate about technology, with a strong interest in programming, hardware systems, and digital innovations.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Biography -->
-    <div class="row">
-      <div class="card biography fade-in clickable" onclick="navigateTo('bio.html')">
-        <h2>Biography</h2>
-        <p>Hello, my name is Alessandro Mercede. I have always been passionate about the IT world; since childhood, I enjoyed disassembling and reassembling computers. Today, I build complete workstations from scratch, component by component, and develop websites and databases.</p><br> <p class="clickHere"> Click here to learn more about me.</p>
-      </div>
-    </div>
-
-    <!-- Work and Education Experiences -->
-    <div class="row">
-      <div class="card work fade-in clickable" onclick="navigateTo('Soon.html')">
-        <h2>Work Experiences</h2>
-        <ul>
-          <li>Technical assistance</li>
-          <li>Web app development using OpenData</li>
-          <li>PC workstation building</li>
-        </ul>
-        <p class="clickHere">Click here to see all my experiences</p>
-      </div>
-
-      <div class="card education fade-in clickable" onclick="navigateTo('Soon.html')">
-        <h2>Education</h2>
-        <ul>
-          <li>I.T.I.S. Alessandro Rossi, Vicenza, Italy</li> 
-          <li>University of Verona in Computer Science</li>
-          <li>Erasmus 2025 Waterford, Ireland</li>  <!--at South East Technological University,-->
-        </ul>
-        <p class="clickHere">Click here to see all my educational programmes</p>  
-      </div>
-    </div>
-
-    <!-- Titles and Certifications -->
-    <div class="row">
-      <div class="card titles fade-in clickable" onclick="navigateTo('Soon.html')">
-        <h2>Titles and Certifications</h2>
-        <ul>
-          <li>High School Diploma in Information Technology</li>
-          <li>Cisco CCNA Certification</li>
-          <li>KNIME Certification</li>
-        </ul>
-        <p class="clickHere">Click here to see all my title & certificatios</p>
-      </div>
-
-    </div>
-
-    <!-- Social and Contacts -->
-    <div class="row">
-      <div class="card social fade-in clickable" onclick="navigateTo('Soon.html')">
-        <h2>Social</h2>
-        <div class="social-icons">
-          <a href="https://www.instagram.com/alessandromercede/" target="_blank" onclick="event.stopPropagation()">
-            <img src="icons/Instagram.png" alt="Instagram">
-          </a>
-          <a href="https://www.tiktok.com/@ax3l_builds_pc" target="_blank" onclick="event.stopPropagation()">
-            <img src="icons/tiktok.png" alt="TikTok">
-          </a>
-          <a href="https://www.facebook.com/alessandro.mercede/" target="_blank" onclick="event.stopPropagation()">
-            <img src="icons/facebook.png" alt="Facebook">
-          </a>
-          <a href="https://linkedin.com" target="_blank" onclick="event.stopPropagation()">
-            <img src="icons/linkedin.png" alt="LinkedIn">
-          </a>
+        <div class="row">
+            <div class="card biography fade-in clickable" onclick="navigateTo('bio.html')">
+                <h2>Biography</h2>
+                <p>Hello, my name is Alessandro Mercede. I have always had a passion for the IT world; since I was a child, I enjoyed taking apart and reassembling computers. Today I build complete workstations from scratch, component by component, and develop websites and databases.</p>
+                <br>
+                <p class="clickHere">Click here to know more about me.</p>
+            </div>
         </div>
-      </div>
 
-      <div class="card contact fade-in">
-        <h2>Contact Me</h2>
-        <p><strong>Email:</strong> mercedealessandro@gmail.com</p>
-        <p><strong>IT Phone:</strong> +39 3512508066</p>
-        <p><strong>IRE Phone:</strong> +353 870320567</p>
-      </div>
-    </div>
-  </div>
+        <div class="row">
+            <div class="card work fade-in clickable" onclick="navigateTo('experiences.html')">
+                <h2>Work Experiences</h2>
+                <ul>
+                    <li>Technical support</li>
+                    <li>Web app development using OpenData</li>
+                    <li>Building PC workstations</li>
+                </ul>
+                <p class="clickHere">Click here to see all my experiences</p>
+            </div>
 
-  <footer>
-    <div class="footer-signature">
-      <p>Ax3l</p>
+            <div class="card education fade-in clickable" onclick="navigateTo('study.html')">
+                <h2>Education</h2>
+                <ul>
+                    <li>I.T.I.S. Alessandro Rossi, Vicenza, Italy</li> 
+                    <li>University of Verona in Computer Science</li>
+                    <li>Erasmus 2025 Waterford, Ireland</li> 
+                </ul>
+                <p class="clickHere">Click here to see all my educational paths</p>  
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card titles fade-in clickable" onclick="navigateTo('certifications.html')">
+                <h2>Qualifications and Certifications</h2>
+                <ul>
+                    <li>High School Diploma in Computer Science</li>
+                    <li>Cisco CCNA Certification</li>
+                    <li>KNIME Certification</li>
+                </ul>
+                <p class="clickHere">Click here to see all my qualifications and certifications</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card social fade-in clickable" onclick="navigateTo('social.html')">
+                <h2>Socials</h2>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/alessandromercede/" target="_blank" onclick="event.stopPropagation()">
+                        <img src="icons/Instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.tiktok.com/@ax3l_builds_pc" target="_blank" onclick="event.stopPropagation()">
+                        <img src="icons/tiktok.png" alt="TikTok">
+                    </a>
+                    <a href="https://www.facebook.com/alessandro.mercede/" target="_blank" onclick="event.stopPropagation()">
+                        <img src="icons/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" onclick="event.stopPropagation()">
+                        <img src="icons/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card contact fade-in clickable" onclick="navigateTo('social.html')">
+                <h2>Contacts</h2>
+                <p><strong>Email:</strong> mercedealessandro@gmail.com</p>
+                <p><strong>Phone IT:</strong> +39 3512508066</p>
+                <p><strong>Phone IRL:</strong> +353 870320567</p>
+            </div>
+        </div>
     </div>
-    <nav class="footer-nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="bio.html">About Me</a></li>
-        <li><a href="Soon.html">Work</a></li>
-        <li><a href="Soon.html">Contacts</a></li>
-      </ul>
-    </nav>
-    <div class="footer-copy">
-      <p>&copy; Alessandro Mercede</p>
-    </div>
-  </footer>
+
+    <footer>
+        <div class="footer-signature">
+            <p>Ax3l</p>
+        </div>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="bio.html">About me</a></li>
+                <li><a href="experiences.html">Work</a></li>
+                <li><a href="social.html">Contacts</a></li>
+            </ul>
+        </nav>
+        <div class="footer-copy">
+            <p>&copy; Alessandro Mercede</p>
+        </div>
+    </footer>
 </body>
 </html>
